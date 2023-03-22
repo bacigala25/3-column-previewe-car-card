@@ -1,0 +1,143 @@
+/*Colors*/
+:root{
+/*Primary*/
+
+--Bright-orange: hsl(31, 77%, 52%);
+--Dark-cyan: hsl(184, 100%, 22%);
+--Very-dark-cyan: hsl(179, 100%, 13%);
+
+/*Neutral*/
+
+--Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+--Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 18px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--Very-light-gray-background-headings-buttons);    
+}
+
+h1{
+    text-transform: uppercase;
+    font-family: Big Shoulders Display;
+    color: var(--Very-light-gray-background-headings-buttons);
+    font-size: 2rem;
+}
+
+.container{
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+}
+
+img, h1{
+    padding-bottom: 2rem;
+    width: 60px;
+}
+
+p{
+    font-family: Lexend Deca;
+    font-size: 0.9rem;
+    line-height: 1.7rem;
+    padding-bottom: 4rem;
+    color: var(--Transparent-white-paragraphs);
+}
+.car{
+    width: 33.33333333333%;
+    height: 100%;
+}
+
+
+.cards-of-car{
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.car-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2.5rem;
+    
+}
+
+.sedan {
+    background-color: var(--Bright-orange);
+}
+
+.suv{
+    background-color: var(--Dark-cyan);
+}
+
+.luxury{
+    background-color: var(--Very-dark-cyan);
+}
+
+.btn{
+    width: 135px;
+    height: 40px;
+    border-radius: 1.7rem;
+    border-style: none;
+    font-family: Lexend Deca;   
+}
+
+.sedan button{
+    color: var(--Bright-orange);
+}
+.suv button{
+    color: var(--Dark-cyan)
+}
+.luxury button{
+    color: var(--Very-dark-cyan);
+}
+
+ button:hover{
+    color: var(--Very-light-gray-background-headings-buttons);
+    background-color: var(--Bright-orange);
+    border: 2px solid hsl(0, 0%, 95%);
+    cursor: pointer;
+}
+
+.suv button:hover{
+    background-color: var(--Dark-cyan);
+}
+
+.luxury button:hover{
+    background-color: var(--Very-dark-cyan);
+}
+
+@media screen and (max-width: 730px) {
+    .container{
+        width:375px;
+        flex-direction: column;
+        padding: 3rem 2rem ;
+    }
+    .cards-of-car{
+        flex-direction: column;
+    }
+
+    .car{
+        width: 100%;
+    }
+
+    p{
+        font-size: 1.2rem;
+    }
+    
+}
+
